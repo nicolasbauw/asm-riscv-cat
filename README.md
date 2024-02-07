@@ -7,6 +7,4 @@ The source shows how to:
 - use command line arguments
 - make system calls
 
-TODO : find the right system call for "open"
-
 Makefile will build with debug symbols, so you can have some fun with gdb :-)
