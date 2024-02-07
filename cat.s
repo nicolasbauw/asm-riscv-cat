@@ -2,10 +2,11 @@
 .text
 
 _start:
-    ld  a0,16(sp)       # argv[1]
-    li  a1,0            # flags
-    li  a2,0            # mode
-    li  a7,1024         # "open" system call    <--- can't find the right open system call !!
+    li  a0,-100         # AT_FDCWD
+    ld  a1,16(sp)       # argv[1]
+    li  a2,0            # flags
+    li  a3,0            # mode
+    li  a7,56           # "openat" system call
     ecall
     blt a0,x0,exit      # Error ? we exit
 
